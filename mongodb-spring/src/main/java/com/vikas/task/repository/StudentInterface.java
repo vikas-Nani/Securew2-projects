@@ -7,4 +7,6 @@ import com.vikas.task.model.Student;
 @Repository
 public interface StudentInterface extends MongoRepository<Student, String> {
 
+	
+
 }

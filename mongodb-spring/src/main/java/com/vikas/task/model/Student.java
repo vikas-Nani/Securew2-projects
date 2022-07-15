@@ -1,14 +1,13 @@
 package com.vikas.task.model;
 
 import java.util.HashMap;
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Student {
 	@Id
-	private String id;
+	private Long id;
+	private Long stuid;
 	private String name;
 	private String sclass;
 	private HashMap<String,Integer> map;
@@ -16,17 +15,18 @@ public class Student {
 	public Student() {
 		super();
 	}
-	public Student( String name, String sclass,HashMap<String,Integer> map) {
+	public Student( String name, String sclass,HashMap<String,Integer> map,Long stuid) {
 		super();
 		
 		this.name = name;
 		this.sclass = sclass;
 		this.map=map;
+		this.stuid=stuid;
 	}
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -46,6 +46,12 @@ public class Student {
 	}
 	public void setMap(HashMap<String, Integer> map) {
 		this.map = map;
+	}
+	public Long getStuid() {
+		return stuid;
+	}
+	public void setStuid(Long stuid) {
+		this.stuid = stuid;
 	}
 	
 	
