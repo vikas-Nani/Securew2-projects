@@ -23,6 +23,12 @@ class Engineer extends Employee_Profile {
 		this.salary = salary;
 		this.grade = grade;
 	}
+	
+
+	public Engineer() {
+		super();
+	}
+
 
 	@Override
 	void SetSalary(int salary) {
@@ -67,6 +73,12 @@ class Manager extends Employee_Profile {
 		this.salary = salary;
 		this.grade = grade;
 	}
+	
+
+	public Manager() {
+		super();
+	}
+
 
 	@Override
 	void SetSalary(int salary) {
